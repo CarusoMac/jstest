@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objednavkovy formular</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Objednavkovy formular</h1>
+      </header>
+      <main>
+        <form id="order">
+          <!--Znacka-->
+          <fieldset>
+            <legend>Znacka</legend>
+            <label for="car">Vyberte konkretni znacku vozu</label>
+            <select class="input" name="car" id="car">
+              <option value="1500000">Mercedes 1 500 000 Kc</option>
+              <option value="1200000">Volvo 1 200 000 Kc</option>
+              <option value="1350000">Audi 1 350 000 Kc</option>
+              <option value="1400000">BMW 1 400 000 Kc</option>
+            </select>
+          </fieldset>
+          <!--Barva-->
+          <br />
+          <fieldset>
+            <legend>Barva</legend>
+            <input
+              class="input"
+              type="radio"
+              id="basic"
+              name="color"
+              value="basic"
+            />
+            <label for="basic">zakladni barva(bez priplatku)</label><br />
+            <input
+              class="input"
+              type="radio"
+              id="lak"
+              name="color"
+              value="lak"
+              checked
+            />
+            <label for="lak"
+              >paleny lak(s priplatkem 5% ze zakladni ceny vozu)</label
+            ><br />
+            <input
+              class="input"
+              type="radio"
+              id="metal"
+              name="color"
+              value="metal"
+            />
+            <label for="metal">metalick0 barvy (s priplatkem 7%)</label>
+          </fieldset>
+          <br />
+          <!--DODATECNA VYBAVA-->
+          <fieldset>
+            <legend>Dodatecna vybava</legend>
+            <input
+              class="input"
+              type="checkbox"
+              id="parcCam"
+              name="vybava"
+              value="parcCam"
+              checked
+            />
+            <label for="parcCam"> Parkovaci kamery (+10 000 Kc)</label><br />
+            <input
+              class="input"
+              type="checkbox"
+              id="wheels"
+              name="vybava"
+              value="wheels"
+              checked
+            />
+            <label for="wheels"> Lita kola (+20 000 Kc)</label><br />
+            <input
+              class="input"
+              type="checkbox"
+              id="leather"
+              name="vybava"
+              value="leather"
+            />
+            <label for="leather"> Kozene sedacky (+50 000) </label><br />
+            <input
+              class="input"
+              type="checkbox"
+              id="tuning"
+              name="vybava"
+              value="tuning"
+            />
+            <label for="tuning"> Tuningova uprava (+20% ze zakladni ceny)</label
+            ><br />
+          </fieldset>
+          <br />
+          <fieldset>
+            <legend>Cena</legend>
+
+            <p id="outputVyslCena">Celkova cena</p>
+            <p>
+              Zadejte prosim cenu, kterou jste ochotni za auto dle uvedenych
+              parametru zaplatit
+            </p>
+            <label for="expected">limitni cena</label><br /><input
+              class="input"
+              type="text"
+              id="expected"
+              name="expected"
+            /><br />
+            <p id="priceInfo"></p>
+          </fieldset>
+          <br />
+          <fieldset>
+            <legend>Email</legend>
+            <label for="email"> Zadejte Vas email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="johndoe@email.xx"
+            />
+            <p id="error"></p>
+          </fieldset>
+          <br />
+          <button type="submit" id="submit" form="#order">Odeslat</button>
+        </form>
+      </main>
+      <footer></footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
